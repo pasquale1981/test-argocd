@@ -4,4 +4,4 @@ resources:
 - deployment.yaml
 images:
 - name: pasqualematera/test-docker
-  newTag: latest
+  newTag: 6f9914d7780378e27228cf87f869254e19abd0af
