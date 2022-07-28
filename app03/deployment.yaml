@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: test-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: test-deploy
+  template:
+    metadata:
+      labels:
+        k8s-app: test-deploy
+    spec:
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: test-deploy
+          image: pasqualematera/test-docker
+         
