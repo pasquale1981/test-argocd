@@ -7,11 +7,11 @@ spec:
   selector:
     matchLabels:
       k8s-app: test-deploy
-      var: valore
   template:
     metadata:
       labels:
         k8s-app: test-deploy
+        var: valore
     spec:
       securityContext:
         seccompProfile:
